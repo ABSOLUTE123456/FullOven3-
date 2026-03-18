@@ -1,4 +1,3 @@
-/* 1. ПОДКЛЮЧЕНИЕ ШРИФТОВ */
 @font-face {
     font-family: 'BagelFatOne';
     src: url('../fonts/BagelFatOne-Regular.ttf') format('truetype');
@@ -8,14 +7,12 @@
     src: url('../fonts/Bellota-Regular.ttf') format('truetype');
 }
 
-/* 2. ПЕРЕМЕННЫЕ */
 :root {
     --header-green: #378659;
     --main-bg: #483E35;
     --text-white: #ffffff;
 }
 
-/* 3. ОБЩИЕ ПРАВИЛА */
 * { box-sizing: border-box; }
 
 body {
@@ -26,7 +23,7 @@ body {
     color: var(--text-white);
     line-height: 1.4;
     overflow-x: hidden;
-    padding-top: 70px; /* Отступ под фиксированную шапку */
+    padding-top: 70px;
 }
 
 .container {
@@ -35,7 +32,6 @@ body {
     margin: 0 auto;
 }
 
-/* 4. ФИКСИРОВАННАЯ ШАПКА */
 .header {
     background-color: var(--header-green);
     padding: 8px 0;
@@ -79,7 +75,6 @@ body {
 .logo-icon { width: 35px; margin-left: 10px; }
 .logo-sub { font-size: 12px; margin-top: 2px; opacity: 0.9; }
 
-/* 5. HERO (ИЗОБРАЖЕНИЕ БЕЗ НИЖНЕГО ОТСТУПА) */
 .hero {
     height: 60vh; 
     min-height: 450px;
@@ -89,7 +84,7 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 6px solid var(--header-green);
-    margin-bottom: 0; /* Гарантируем отсутствие отступа снизу */
+    margin-bottom: 0;
 }
 
 .hero h1 { 
@@ -115,9 +110,8 @@ body {
     font-weight: bold;
 }
 
-/* 6. О РЕСТОРАНЕ (ПРИЖАТ К ИЗОБРАЖЕНИЮ) */
 .about { 
-    padding: 10px 0 50px; /* Почти убрали верхний padding (всего 10px) */
+    padding: 10px 0 50px;
     text-align: center; 
 }
 
@@ -127,7 +121,7 @@ body {
     display: inline-block;
     border-bottom: 1px solid white;
     padding-bottom: 8px;
-    margin-top: 0; /* Убираем возможный отступ сверху */
+    margin-top: 0;
 }
 
 .features {
