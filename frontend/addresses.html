@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FullOven</title>
+    <title>FullOven - Меню</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
 
-    <header class="header">
+<header class="header">
         <div class="container header-content">
             <div class="logo">
             <a href="index.html" style="text-decoration: none; color: inherit;">
@@ -21,9 +22,9 @@
 </div>
 
             <nav class="nav">
-                <a href="#" class="nav-link active">главная</a>
+                <a href="index.html" class="nav-link">главная</a>
                 <a href="menu.html" class="nav-link">меню</a>
-                <a href="addresses.html" class="nav-link">наши места</a>
+                <a href="addresses.html" class="nav-link active">наши места</a>
                 <a href="reservation.html" class="nav-link">бронирование</a>
                 <a href="connection.html" class="nav-link">контакты</a>
                 <div class="nav-underline"></div>
@@ -31,37 +32,47 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Добро пожаловать</h1>
-                <p>Традиционные рецепты встречаются с современными трендами в атмосфере уюта и изысканности</p>
-                <a href="menu.html" class="btn">Открыть меню</a>
+    
+
+<section class="places-page">
+    <div class="container">
+        <div class="menu-title-block">
+            <h1 class="section-title">Наши заведения</h1>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="places-grid">
+            <!-- Заведение 1 -->
+            <div class="place-card">
+                <div class="place-info">
+                    <h3>Элитный центр</h3>
+                    <p>Ул. Императорская, д. 3, стр. 1<br>г. Москва, 119019</p>
+                </div>
+                <img src="images/image 10.png" alt="Центр" class="place-img">
+            </div>
+
+            <!-- Заведение 2 -->
+            <div class="place-card">
+                <div class="place-info">
+                    <h3>Уютный район</h3>
+                    <p>Ул. Липовая Аллея, д. 27<br>г. Нижний Новгород, 603105</p>
+                </div>
+                <img src="images/image 11.png" alt="Район" class="place-img">
+            </div>
+
+            <!-- Заведение 3 -->
+            <div class="place-card">
+                <div class="place-info">
+                    <h3>Туристический</h3>
+                    <p>Центральная Набережная, д. 12<br>г. Сочи, 354000</p>
+                </div>
+                <img src="images/image 12.png" alt="Сочи" class="place-img">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="about">
-        <div class="container">
-            <h2 class="section-title">О ресторане</h2>
-            <div class="features">
-                <div class="feature-card">
-                    <h3>Свежие продукты</h3>
-                    <p>Ежедневные поставки от проверенных фермеров</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Высокое качество</h3>
-                    <p>Лучшие шеф-повара и премиальные ингредиенты</p>
-                </div>
-                <div class="feature-card">
-                    <h3>С любовью к делу</h3>
-                    <p>Каждое блюдо готовится с душой и вниманием к деталям</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
+<script>
         const nav = document.querySelector('.nav');
         const links = document.querySelectorAll('.nav-link');
         const underline = document.querySelector('.nav-underline');
@@ -81,5 +92,6 @@
             });
         });
     </script>
+
 </body>
 </html>

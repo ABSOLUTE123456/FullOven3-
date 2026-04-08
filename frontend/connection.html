@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullOven - Меню</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+        <div class="container header-content">
+            <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+            <div class="logo-top">
+            <span class="logo-name">FULL OVEN</span>
+            <img src="images/Group.svg" alt="icon" class="logo-icon">
+        </div>
+        <p class="logo-sub">Ресторан русской кухни</p>
+    </a>
+</div>
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link">главная</a>
+                <a href="menu.html" class="nav-link">меню</a>
+                <a href="addresses.html" class="nav-link">наши места</a>
+                <a href="reservation.html" class="nav-link">бронирование</a>
+                <a href="connection.html" class="nav-link active">контакты</a>
+                <div class="nav-underline"></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contacts-page">
+    <div class="container">
+        <div class="menu-title-block">
+            <h1 class="section-title">Информация и связь</h1>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="contacts-grid">
+            <!-- Блок 1: Часы работы -->
+            <div class="contact-card">
+                <h3>Часы работы</h3>
+                <p>Пн–Чт: 12:00–23:00</p>
+                <p>Пт–Сб: 12:00–01:00</p>
+                <p>Вс: Выходной день</p>
+            </div>
+
+            <!-- Блок 2: Связь с нами -->
+            <div class="contact-card">
+                <h3>Связь с нами</h3>
+                <p>Телефон: +79774809258</p>
+                <p>Telegram: +79774809258</p>
+                <p>Email: aleksandrkruglov06@gmail.com</p>
+            </div>
+
+            <!-- Блок 3: Адреса -->
+            <div class="contact-card">
+                <h3>Адреса ресторанов</h3>
+                <p>Ул. Императорская, д. 3, стр. 1<br>г. Москва, 119019</p>
+                <p>Ул. Липовая Аллея, д. 27<br>г. Нижний Новгород, 603105</p>
+                <p>Центральная Набережная, д. 12<br>г. Сочи, 354000</p>
+            </div>
+
+            <!-- Блок 4: Партнерам -->
+            <div class="contact-card">
+                <h3>Партнерам и поставщикам</h3>
+                <p>Email: aleksandrkruglov06@gmail.com</p>
+                <p>Телефон: +79774809258</p>
+            </div>
+        </div>
+
+        <div class="contacts-footer">
+            <p>Если что-то пошло не так — пишите нам лично.<br>Нам важно ваше мнение.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+        const nav = document.querySelector('.nav');
+        const links = document.querySelectorAll('.nav-link');
+        const underline = document.querySelector('.nav-underline');
+
+        function moveUnderline(element) {
+            underline.style.left = element.offsetLeft + 'px';
+            underline.style.width = element.offsetWidth + 'px';
+        }
+
+        window.addEventListener('load', () => moveUnderline(document.querySelector('.nav-link.active')));
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                links.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                moveUnderline(link);
+            });
+        });
+    </script>
+

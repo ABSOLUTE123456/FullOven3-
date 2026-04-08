@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullOven - Меню</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+        <div class="container header-content">
+             <div class="logo">
+             <a href="index.html" style="text-decoration: none; color: inherit;">
+             <div class="logo-top">
+             <span class="logo-name">FULL OVEN</span>
+             <img src="images/Group.svg" alt="icon" class="logo-icon">
+        </div>
+        <p class="logo-sub">Ресторан русской кухни</p>
+    </a>
+</div>
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link">главная</a>
+                <a href="menu.html" class="nav-link">меню</a>
+                <a href="addresses.html" class="nav-link">наши места</a>
+                <a href="reservation.html" class="nav-link active">бронирование</a>
+                <a href="connection.html" class="nav-link">контакты</a>
+                <div class="nav-underline"></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="booking-page">
+    <div class="container">
+        <div class="booking-header">
+            <h1 class="section-title">Бронирование столика</h1>
+            <p class="booking-subtitle">
+                Приглашаем вас насладиться незабываемым ужином.<br>
+                Забронируйте столик уже сегодня!
+            </p>
+        </div>
+
+        <div class="booking-card">
+            <form class="booking-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Введите имя" required>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" placeholder="Введите фамилию">
+                    <input type="number" placeholder="Кол-во гостей">
+                </div>
+                <div class="form-row">
+                    <input type="date" placeholder="Выберите дату">
+                    <input type="time" placeholder="Выберите время">
+                </div>
+                
+                <textarea placeholder="Оставить комментарий" rows="4"></textarea>
+
+                <button type="submit" class="booking-btn">Забронировать</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+        const nav = document.querySelector('.nav');
+        const links = document.querySelectorAll('.nav-link');
+        const underline = document.querySelector('.nav-underline');
+
+        function moveUnderline(element) {
+            underline.style.left = element.offsetLeft + 'px';
+            underline.style.width = element.offsetWidth + 'px';
+        }
+
+        window.addEventListener('load', () => moveUnderline(document.querySelector('.nav-link.active')));
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                links.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                moveUnderline(link);
+            });
+        });
+    </script>
+
